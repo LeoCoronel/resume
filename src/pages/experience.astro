@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import TimeLineItem from "../components/TimeLineItem.astro";
+
+const jobs = await getCollection("jobs");
+---
+
+<section
+  aria-label="experience"
+  id="experience"
+  class="w-full h-screen flex justify-center"
+>
+  <div class="content-center">
+    {
+      jobs.map((job) => {
+        return <TimeLineItem job={job} />;
+      })
+    }
+  </div>
+</section>

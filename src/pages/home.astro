@@ -1,0 +1,36 @@
+---
+import Portrait from "/src/assets/images/portrait.png";
+import Fire from "/src/assets/images/Fire.svg";
+---
+
+<main>
+  <!-- Hero -->
+  <section class="w-full h-screen flex flex-col lg:flex-row">
+    <!-- Right side: Black background with an image -->
+    <div
+      class="h-screen w-full lg:w-1/2 flex items-center justify-center p-4 order-1 lg:order-2"
+    >
+      <div class="img-container bg-[#F7A93D] pt-20 rounded-t-full relative">
+        <img src={Portrait.src} alt="Portrait" />
+        <div
+          class="cursor-pointer flex items-center justify-center rounded-full bg-slate-500 w-10 h-10 absolute left-1/2 translate-x-[-50%] bottom-[-5%]"
+        >
+          <img src={Fire.src} alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Left side: White background with big text -->
+    <div
+      class="h-3/6 lg:h-screen w-full lg:w-1/2 bg-white flex items-center justify-center p-4 order-2 lg:order-1"
+    >
+      <h1
+        class="text-6xl lg:text-7xl xl:text-8xl text-[#2C2B2B] font-black text-center lg:text-right"
+      >
+        WEB<span class="block">DEVELOPER</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- End Hero -->
+</main>
