@@ -7,5 +7,4 @@ technologies: [react, aws, angular]
 position: FullStack Developer
 ---
 
-Since joining Banco Comafi in 2023, I have been actively involved in a significant project focused on the "Individuos" segment. Initially centered around traditional credit card sales, my team and I successfully transitioned the process into a fully digital experience. This development not only streamlined the sales process but also significantly increased digital sales for both credit cards and savings accounts at the bank.
-My participation in this project has been important in advancing the bank's digital initiatives and improving the overall customer experience. I am grateful to have the opportunity to contribute to the team and learn along the way.
+I started my journey at ITR in 2022, initially joining a two-month bootcamp focused on Java and React Native. In May 2023, I transitioned to Banco Comafi, where I currently work. My role is as Fullstack Developer using AWS and Angular to develop innovative solutions. This experience has expanded my skill set and allowed for professional growth in a dynamic environment.

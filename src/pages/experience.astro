@@ -1,20 +1,47 @@
 ---
 import { getCollection } from "astro:content";
 import TimeLineItem from "../components/TimeLineItem.astro";
+import JobDescription from "../components/JobDescription.tsx";
+import Marquee from "../components/Marquee.jsx";
 
-const jobs = await getCollection("jobs");
+interface Job {
+  id: string;
+  body: string;
+  data: {
+    img: string;
+    startDate: Date;
+    finishDate: Date | null; // Permitir null
+    position: string;
+    title: string;
+    technologies: string[];
+  };
+}
+
+const jobsRaw = await getCollection("jobs");
+
+const jobs: Job[] = jobsRaw.map((job) => ({
+  id: String(job.id), // Ensure it's a string
+  body: job.body,
+  data: {
+    img: job.data.img,
+    startDate: job.data.startDate,
+    finishDate: job.data.finishDate,
+    position: job.data.position,
+    title: job.data.title,
+    technologies: job.data.technologies,
+  },
+}));
 ---
 
 <section
   aria-label="experience"
   id="experience"
-  class="w-full h-screen flex justify-center"
+  class="w-full h-screen flex flex-col min-h-screen"
 >
+  <div>
+    <Marquee word="EXPERIENCE" reverse={false} />
+  </div>
   <div class="content-center">
-    {
-      jobs.map((job) => {
-        return <TimeLineItem job={job} />;
-      })
-    }
+    <JobDescription jobs={jobs} client:load />
   </div>
 </section>

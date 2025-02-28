@@ -1,13 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getCollection } from "astro:content";
 import Home from "./home.astro";
 import Experience from "./experience.astro";
-
-const jobs = await getCollection("jobs");
+import About from "./about.astro";
 ---
 
 <Layout title="Leo Coronel">
   <Home />
   <Experience />
+  <About />
 </Layout>
