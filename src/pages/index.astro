@@ -3,10 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import Home from "./home.astro";
 import Experience from "./experience.astro";
 import About from "./about.astro";
+import LenisWrapper from "../components/LenisWrapper";
 ---
 
 <Layout title="Leo Coronel">
-  <Home />
-  <Experience />
-  <About />
+  <LenisWrapper client:only="react">
+    <Home />
+    <Experience />
+    <About />
+  </LenisWrapper>
 </Layout>

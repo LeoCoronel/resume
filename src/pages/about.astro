@@ -2,9 +2,49 @@
 import Marquee from "../components/Marquee.jsx";
 ---
 
-<section aria-label="about" id="about" class="w-full h-screen flex flex-col">
+<section
+  aria-label="about"
+  id="about"
+  class="w-full h-screen flex flex-col min-h-screen"
+>
   <div>
-    <Marquee word="ABOUT" reverse={true} />
+    <Marquee word="ABOUT" reverse={false} />
   </div>
-  <div class="content-center">about</div>
+  <div
+    class="max-w-[85rem] w-full h-full mx-auto px-4 justify-between content-center"
+  >
+    <div class="container">
+      <div class="circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
 </section>
+<style>
+  .container {
+    width: 660px;
+    height: 700px;
+    border: 1px solid #efefef;
+  }
+
+  .circles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid red;
+    width: fit-content;
+    border-top-left-radius: 2.5em;
+    border-top-right-radius: 2.5em;
+    border-bottom-left-radius: 2.5em;
+    border-bottom-right-radius: 2.5em;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #121212;
+  }
+</style>

@@ -1,7 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Navbar from "../components/Navbar.astro";
-
 interface Props {
   title: string;
 }
@@ -23,13 +22,12 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <Navbar />
   <body>
-    <div>
-      <slot />
-    </div>
+    <Navbar />
+    <slot />
   </body>
 </html>
+
 <style is:global>
   :root {
     --accent: 136, 58, 234;
@@ -46,5 +44,24 @@ const { title } = Astro.props;
     font-family: system-ui, sans-serif;
     background: #2c2b2b;
     color: #fff;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: clip;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
   }
 </style>

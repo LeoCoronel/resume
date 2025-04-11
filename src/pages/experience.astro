@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import TimeLineItem from "../components/TimeLineItem.astro";
 import JobDescription from "../components/JobDescription.tsx";
 import Marquee from "../components/Marquee.jsx";
 
@@ -41,7 +40,9 @@ const jobs: Job[] = jobsRaw.map((job) => ({
   <div>
     <Marquee word="EXPERIENCE" reverse={false} />
   </div>
-  <div class="content-center">
+  <div
+    class="max-w-[85rem] w-full h-full mx-auto px-4 justify-between content-center"
+  >
     <JobDescription jobs={jobs} client:load />
   </div>
 </section>
